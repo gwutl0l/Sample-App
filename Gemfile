@@ -21,6 +21,8 @@ group :test do
   gem 'autotest'
   gem 'autotest-rails-pure'
   gem 'test_notifier'
+
+  gem 'factory_girl_rails', '1.0'
 end
 
 # Use unicorn as the web server
