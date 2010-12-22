@@ -23,6 +23,7 @@ group :test do
   gem 'test_notifier'
 
   gem 'factory_girl_rails', '1.0'
+  gem 'rack-ssl'
 end
 
 # Use unicorn as the web server

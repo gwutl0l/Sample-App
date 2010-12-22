@@ -32,4 +32,9 @@ SampleApp::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # ssl
+  require 'rack/ssl'
+  config.middleware.use Rack::SSL
+  config.middleware.insert_before ActionDispatch::Cookies, Rack::SSL
 end
