@@ -115,6 +115,11 @@ describe UsersController do
         get :new
         response.should have_selector("input[name='user[password_confirmation]'][type='password']")
       end
-    end
+
+      it "should sign the user in" do
+        post :create, :user => @attr
+        controller.should be_signed_in
+      end
+    end 
   end
 end
